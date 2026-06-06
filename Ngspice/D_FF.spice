@@ -1,0 +1,53 @@
+* Prasanna N.R 2024102056
+.include TSMC_180nm.txt
+.option scale=0.09u
+
+* --- Power Supply ---
+VDD Vdd 0 1.8
+
+* --- Transistor Network (unchanged) ---
+M1000 I1 in Vdd Vdd CMOSP w=80 l=2
++  ad=960 pd=184 as=1960 ps=482
+M1001 I2 clk 0 0 CMOSN w=40 l=2
++  ad=360 pd=98 as=780 ps=292
+M1002 out O3 0 0 CMOSN w=20 l=2
++  ad=140 pd=54 as=0 ps=0
+M1003 O3 O2 Vdd Vdd CMOSP w=40 l=2
++  ad=720 pd=116 as=0 ps=0
+M1004 O1 in 0 0 CMOSN w=20 l=2
++  ad=120 pd=52 as=0 ps=0
+M1005 O2 clk Vdd Vdd CMOSP w=40 l=2
++  ad=800 pd=120 as=0 ps=0
+M1006 O2 O1 I2 0 CMOSN w=40 l=2
++  ad=320 pd=96 as=0 ps=0
+M1007 O3 clk I3 0 CMOSN w=40 l=2
++  ad=360 pd=98 as=280 ps=94
+M1008 I3 O2 0 0 CMOSN w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 out O3 Vdd Vdd CMOSP w=40 l=2
++  ad=280 pd=94 as=0 ps=0
+M1010 O1 clk I1 Vdd CMOSP w=80 l=2
++  ad=720 pd=178 as=0 ps=0
+
+* --- Parasitic Capacitors (from Magic) ---
+
+* --- Input Stimuli ---
+VIN in 0 PULSE(0 1.8 0 0.1n 0.1n 12n 24n)
+VCLK clk 0 PULSE(0 1.8 0 0.1n 0.1n 9n 18n)
+
+* --- Simulation Command ---
+.tran 0.1n 200n
+
+.control
+run
+
+* 50% delay from 2nd rising edge of clk to 1st falling edge of out
+meas tran t_delay trig v(clk) val=0.9 rise=2 targ v(out) val=0.9 fall=1
+
+
+print t_delay
+
+plot v(in) v(clk)+6 v(out)+12
+.endc
+
+.end

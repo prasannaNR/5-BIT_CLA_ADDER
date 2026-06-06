@@ -1,0 +1,38 @@
+* SPICE3 file created from AND.ext - technology: scmos
+.include TSMC_180nm.txt
+
+.option scale=0.09u
+VDD Vdd 0 1.8
+
+M1000 AND NAND Vdd Vdd CMOSP w=20 l=2
++  ad=120 pd=52 as=560 ps=256
+M1001 Vdd B NAND Vdd CMOSP w=20 l=2
++  ad=0 pd=0 as=280 ps=68
+M1002 NOR A 0 0 CMOSN w=10 l=2
++  ad=120 pd=44 as=320 ps=174
+M1003 AND NAND 0 0 CMOSN w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1004 NOR B imOR Vdd CMOSP w=20 l=2
++  ad=120 pd=52 as=240 ps=64
+M1005 0 B NOR 0 CMOSN w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1006 OR NOR Vdd Vdd CMOSP w=20 l=2
++  ad=120 pd=52 as=0 ps=0
+M1007 imAND A 0 0 CMOSN w=20 l=2
++  ad=280 pd=68 as=0 ps=0
+M1008 NAND A Vdd Vdd CMOSP w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 imOR A Vdd Vdd CMOSP w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1010 OR NOR 0 0 CMOSN w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1011 NAND B imAND 0 CMOSN w=20 l=2
++  ad=124 pd=54 as=0 ps=0
+
+VA A 0 PULSE(0 1.8 0n 0.1n 0.1n 20n 40n)
+VB B 0 PULSE(0 1.8 0n 0.1n 0.1n 15n 30n)
+.tran 0.1n 100n
+.control
+run 
+.endc
+.end

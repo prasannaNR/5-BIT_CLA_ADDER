@@ -1,0 +1,218 @@
+* SPICE3 file created from combined.ext - technology: scmos
+.include TSMC_180nm.txt
+
+.option scale=0.09u
+VDD Vdd 0 1.8
+
+M1000 G0 NAND0 0 0 CMOSN w=10 l=2
++  ad=60 pd=32 as=2080 ps=858
+M1001 B0 B0I6 0 0 CMOSN w=20 l=2
++  ad=220 pd=90 as=0 ps=0
+M1002 OR NOR Vdd Vdd CMOSP w=20 l=2
++  ad=120 pd=52 as=4960 ps=1404
+M1003 B0I6 B0I3 Vdd Vdd CMOSP w=40 l=2
++  ad=720 pd=116 as=0 ps=0
+M1004 NOR A 0 0 CMOSN w=10 l=2
++  ad=120 pd=44 as=0 ps=0
+M1005 Vdd A0 NAND0 Vdd CMOSP w=20 l=2
++  ad=0 pd=0 as=280 ps=68
+M1006 A0 A0I3 Vdd Vdd CMOSP w=40 l=2
++  ad=280 pd=94 as=0 ps=0
+M1007 B0I1 clk B0I0 Vdd CMOSP w=80 l=2
++  ad=720 pd=178 as=960 ps=184
+M1008 B0 B0I6 Vdd Vdd CMOSP w=40 l=2
++  ad=400 pd=146 as=0 ps=0
+M1009 A0I6 inA0 Vdd Vdd CMOSP w=80 l=2
++  ad=960 pd=184 as=0 ps=0
+M1010 ImAND0 B0 0 0 CMOSN w=20 l=2
++  ad=280 pd=68 as=0 ps=0
+M1011 A0I3 clk A0I4 0 CMOSN w=40 l=2
++  ad=360 pd=98 as=280 ps=94
+M1012 A0_not B0 Vdd Vdd CMOSP w=40 l=2
++  ad=320 pd=142 as=0 ps=0
+M1013 A0_not B0 0 0 CMOSN w=20 l=2
++  ad=180 pd=86 as=0 ps=0
+M1014 A0I0 clk A0I6 Vdd CMOSP w=80 l=2
++  ad=720 pd=178 as=0 ps=0
+M1015 B0_not A0 Vdd Vdd CMOSP w=40 l=2
++  ad=200 pd=90 as=0 ps=0
+M1016 B0I3 clk Vdd Vdd CMOSP w=40 l=2
++  ad=800 pd=120 as=0 ps=0
+M1017 imOR A Vdd Vdd CMOSP w=20 l=2
++  ad=240 pd=64 as=0 ps=0
+M1018 OR NOR 0 0 CMOSN w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1019 P0 A0 B0 Vdd CMOSP w=20 l=2
++  ad=320 pd=112 as=0 ps=0
+M1020 B0I3 B0I1 B0I4 0 CMOSN w=40 l=2
++  ad=320 pd=96 as=360 ps=98
+M1021 B0I6 clk B0I5 0 CMOSN w=40 l=2
++  ad=360 pd=98 as=280 ps=94
+M1022 A0I2 clk Vdd Vdd CMOSP w=40 l=2
++  ad=800 pd=120 as=0 ps=0
+M1023 A0I0 inA0 0 0 CMOSN w=20 l=2
++  ad=120 pd=52 as=0 ps=0
+M1024 B0I1 in 0 0 CMOSN w=20 l=2
++  ad=120 pd=52 as=0 ps=0
+M1025 A0I3 A0I2 Vdd Vdd CMOSP w=40 l=2
++  ad=720 pd=116 as=0 ps=0
+M1026 A0I4 A0I2 0 0 CMOSN w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1027 P0 B0_not A0_not Vdd CMOSP w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1028 NAND0 A0 ImAND0 0 CMOSN w=20 l=2
++  ad=124 pd=54 as=0 ps=0
+M1029 A0I5 clk 0 0 CMOSN w=40 l=2
++  ad=360 pd=98 as=0 ps=0
+M1030 NAND0 B0 Vdd Vdd CMOSP w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1031 G0 NAND0 Vdd Vdd CMOSP w=20 l=2
++  ad=120 pd=52 as=0 ps=0
+M1032 A0 A0I3 0 0 CMOSN w=20 l=2
++  ad=140 pd=54 as=0 ps=0
+M1033 P0 A0 A0_not 0 CMOSN w=10 l=2
++  ad=160 pd=72 as=0 ps=0
+M1034 0 B NOR 0 CMOSN w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1035 P0 B0_not B0 0 CMOSN w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1036 A0I2 A0I0 A0I5 0 CMOSN w=40 l=2
++  ad=320 pd=96 as=0 ps=0
+M1037 B0I4 clk 0 0 CMOSN w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1038 B0I0 in Vdd Vdd CMOSP w=80 l=2
++  ad=0 pd=0 as=0 ps=0
+M1039 B0I5 B0I3 0 0 CMOSN w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1040 B0_not A0 0 0 CMOSN w=20 l=2
++  ad=100 pd=50 as=0 ps=0
+M1041 NOR B imOR Vdd CMOSP w=20 l=2
++  ad=120 pd=52 as=0 ps=0
+C0 B Vdd 0.07fF
+C1 A0 0 0.16fF
+C2 B0I3 Vdd 0.17fF
+C3 B0 B0I6 0.06fF
+C4 B0 0 0.16fF
+C5 B0I0 B0I1 0.05fF
+C6 in B0I1 0.04fF
+C7 Vdd Vdd 1.85fF
+C8 A0I6 A0I0 0.05fF
+C9 B0I6 B0I5 0.08fF
+C10 A0 A0I3 0.06fF
+C11 B0 Vdd 0.08fF
+C12 0 B0I5 0.04fF
+C13 Vdd Vdd 0.03fF
+C14 B0I3 clk 0.16fF
+C15 clk Vdd 0.27fF
+C16 P0 Vdd 0.03fF
+C17 A0 A0_not 0.72fF
+C18 A0I0 A0I2 0.05fF
+C19 Vdd Vdd 0.05fF
+C20 A0 Vdd 0.05fF
+C21 B0 A0_not 0.05fF
+C22 B0I3 B0I1 0.05fF
+C23 NOR Vdd 0.10fF
+C24 inA0 0 0.05fF
+C25 A0I2 clk 0.16fF
+C26 0 in 0.05fF
+C27 B0I1 Vdd 0.03fF
+C28 A0 Vdd 0.05fF
+C29 A0 NAND0 0.25fF
+C30 clk Vdd 0.27fF
+C31 0 A0I4 0.04fF
+C32 B0 Vdd 0.05fF
+C33 clk A0I0 0.22fF
+C34 NAND0 G0 0.05fF
+C35 B0 Vdd 0.05fF
+C36 0 B0I4 0.03fF
+C37 Vdd Vdd 0.08fF
+C38 inA0 Vdd 0.09fF
+C39 NAND0 Vdd 0.09fF
+C40 A0 Vdd 0.08fF
+C41 P0 Vdd 0.03fF
+C42 B0_not Vdd 0.08fF
+C43 A0_not Vdd 0.04fF
+C44 A0 P0 0.12fF
+C45 A0I3 Vdd 0.19fF
+C46 B0 P0 0.02fF
+C47 A0I3 A0I4 0.08fF
+C48 B0_not Vdd 0.04fF
+C49 B0_not P0 0.20fF
+C50 B0I6 Vdd 0.19fF
+C51 clk B0I1 0.22fF
+C52 A0I0 0 0.16fF
+C53 B0I0 Vdd 0.02fF
+C54 Vdd Vdd 0.03fF
+C55 A0 Vdd 0.08fF
+C56 in Vdd 0.09fF
+C57 0 A0I5 0.03fF
+C58 B0 Vdd 0.06fF
+C59 A0 B0 2.39fF
+C60 inA0 A0I0 0.04fF
+C61 A0I6 Vdd 0.02fF
+C62 A0_not Vdd 0.06fF
+C63 Vdd Vdd 1.85fF
+C64 A Vdd 0.07fF
+C65 A0 Vdd 0.07fF
+C66 NOR OR 0.05fF
+C67 A0 B0_not 0.07fF
+C68 B0 Vdd 0.07fF
+C69 B NOR 0.15fF
+C70 A0I2 Vdd 0.17fF
+C71 G0 Vdd 0.02fF
+C72 OR Vdd 0.02fF
+C73 A0I0 Vdd 0.03fF
+C74 0 B0I1 0.16fF
+C75 P0 A0_not 0.02fF
+C76 0 0 0.97fF
+C77 B0I5 0 0.02fF
+C78 B0I4 0 0.03fF
+C79 clk 0 0.64fF
+C80 B0I6 0 0.41fF
+C81 B0I3 0 0.14fF
+C82 B0I1 0 0.83fF
+C83 B0I0 0 0.01fF
+C84 Vdd 0 0.04fF
+C85 clk 0 0.29fF
+C86 in 0 0.16fF
+C87 A0_not 0 0.07fF
+C88 P0 0 1.61fF
+C89 B0_not 0 1.08fF
+C90 A0I4 0 0.03fF
+C91 A0I5 0 0.03fF
+C92 A0I3 0 0.90fF
+C93 A0I2 0 0.80fF
+C94 G0 0 0.07fF
+C95 A0I0 0 0.58fF
+C96 A0I6 0 0.01fF
+C97 clk 0 0.76fF
+C98 inA0 0 0.15fF
+C99 NAND0 0 0.43fF
+C100 A0 0 0.15fF
+C101 B0 0 5.56fF
+C102 OR 0 0.07fF
+C103 NOR 0 0.48fF
+C104 B 0 0.21fF
+C105 A 0 0.32fF
+C106 Vdd 0 0.93fF
+C107 Vdd 0 0.93fF
+C108 Vdd 0 1.74fF
+C109 Vdd 0 23.06fF
+C110 Vdd 0 1.74fF
+C111 Vdd 0 2.45fF
+C112 Vdd 0 23.06fF
+C113 Vdd 0 2.78fF
+
+
+VinA inA0 0 PULSE(0 1.8 0n 0.1n 0.1n 20n 40n)
+VinB inB0 0 PULSE(0 1.8 0n 0.1n 0.1n 15n 30n)
+Vclk clk 0 PULSE(0 1.8 0n 0.1n 0.1n 18n 36n)
+
+.tran 0.1n 100n
+
+.control
+run
+plot v(inA0) v(inB0) 
+.endc
+
+.end

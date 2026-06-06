@@ -1,0 +1,46 @@
+* Prasanna N.R 2024102056
+.include TSMC_180nm.txt
+
+.option scale=0.09u
+VDD Vdd 0 1.8
+
+M1000 B_not B Vdd Vdd CMOSP w=40 l=2
++  ad=200 pd=90 as=480 ps=184
+M1001 out B A_not gnd CMOSN w=10 l=2
++  ad=160 pd=72 as=180 ps=86
+M1002 out B_not A_not Vdd CMOSP w=20 l=2
++  ad=320 pd=112 as=320 ps=142
+M1003 B_not B 0 0 CMOSN w=20 l=2
++  ad=100 pd=50 as=200 ps=100
+M1004 out B_not A gnd CMOSN w=10 l=2
++  ad=0 pd=0 as=80 ps=36
+M1005 A_not A Vdd Vdd CMOSP w=40 l=2
++  ad=0 pd=0 as=0 ps=0
+M1006 A_not A 0 0 CMOSN w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1007 out B A Vdd CMOSP w=20 l=2
++  ad=0 pd=0 as=120 ps=52
+C0 B A_not 0.72fF
+C1 B_not out 0.20fF
+C2 B A 0.18fF
+C3 B out 0.12fF
+C4 out 0 1.61fF
+C5 A 0 0.26fF
+C6 B_not 0 1.08fF
+C7 B 0 1.04fF
+C8 w_41_n133# 0 0.93fF
+C9 w_42_n47# 0 0.93fF
+C10 w_n25_n46# 0 1.74fF
+C11 w_42_60# 0 1.74fF
+
+VA A 0 PULSE(0 1.8 0n 0.1n 0.1n 20n 40n)
+VB B 0 PULSE(0 1.8 0n 0.1n 0.1n 15n 30n)
+.tran 0.1n 100n
+
+* Control section
+.control
+run
+plot v(A) v(B)+2  v(out)+4
+.endc
+
+.end
